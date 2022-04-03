@@ -14,6 +14,7 @@ This project has been developed with the last version of React.js and Redux (Red
 
 - [DEMO URL](https://pp-github-users.netlify.app)
 
+
 ## Available Scripts
 
 In the project directory, you can run:
