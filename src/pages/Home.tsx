@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import GithubLogo from "../assets/image/GitHub-Mark-120px-plus.png";
+import GithubLogo from "../assets/image/github-logo.png";
 
 export const Home = () => {
   const navigate = useNavigate();

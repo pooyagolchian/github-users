@@ -1,0 +1,15 @@
+body {
+  background-color: #f1f1f1;
+}
+
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
