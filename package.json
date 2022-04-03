@@ -30,6 +30,9 @@
     "cypress": "cypress open",
     "cypress:mobile": "cypress run --config viewportWidth=375,viewportHeight=667"
   },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
