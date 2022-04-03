@@ -80,15 +80,6 @@ describe('Users page', () => {
     )
   })
 
-  test('should have image', () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    )
-    const firstImage = screen.findByRole('img', { name: /mdq6vxnlcje=/i })
-    expect(firstImage).toBeTruthy()
-  })
 
   test('should have image', () => {
     render(
