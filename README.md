@@ -8,6 +8,11 @@ This project has been developed with the last version of React.js and Redux (Red
 - React testing library
 - Prettier, ESLint, Husky
 - Netlify and GithubAction for CI/CD automate testing
+---
+
+## DEMO URL GITHUB Users
+
+- [DEMO URL](https://pp-github-users.netlify.app)
 
 ## Available Scripts
 
@@ -50,12 +55,17 @@ In addition, I check pretty before every commit by add a pre-commit hook. For mo
 
 Husky is used for git hook pre-commit to format all code with Prettier.
 
+
+### GitHub actions for automated testing
+Use GitHub actions for automated testing and run all Unit Test.
+
 ### SOLID
 
 Regarding the `S` for `SOLID` I just tried to keep each function(component as a function as well) to
 just responsible for a single task. That's why I just created a separate component for every part
 and also keep it simple stupid.
 
+--- 
 ## Test with React Testing Library
 
 `yarn test`
