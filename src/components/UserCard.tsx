@@ -1,21 +1,21 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { usersActions } from "../store/users";
-import { User } from "../interfaces/IUser";
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { usersActions } from '../store/users'
+import { User } from '../interfaces/IUser'
 
 interface Props {
-  users: User[];
+  users: User[]
 }
 
 export const UserCard = ({ users }: Props) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const removeUser = (id: number): void => {
-    dispatch(usersActions.removeUser(id));
-  };
+    dispatch(usersActions.removeUser(id))
+  }
 
   if (!users) {
-    return <>Result not found!</>;
+    return <>Result not found!</>
   }
 
   return (
@@ -44,8 +44,8 @@ export const UserCard = ({ users }: Props) => {
                 href={user.html_url}
                 rel="noreferrer"
               >
-                {" "}
-                User Profile{" "}
+                {' '}
+                User Profile{' '}
               </a>
               <hr />
 
@@ -63,5 +63,5 @@ export const UserCard = ({ users }: Props) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}

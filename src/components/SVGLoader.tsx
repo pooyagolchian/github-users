@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export const SVGLoader = () => {
   return (
@@ -30,5 +30,5 @@ export const SVGLoader = () => {
         />
       </circle>
     </svg>
-  );
-};
+  )
+}

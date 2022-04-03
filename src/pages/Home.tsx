@@ -1,13 +1,13 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import GithubLogo from "../assets/image/github-logo.png";
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import GithubLogo from '../assets/image/github-logo.png'
 
 export const Home = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleRouteToUsersPage = async () => {
-    await navigate("/users");
-  };
+    await navigate('/users')
+  }
 
   return (
     <div className="page-center">
@@ -29,5 +29,5 @@ export const Home = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

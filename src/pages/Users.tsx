@@ -1,48 +1,48 @@
-import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { usersActions } from "../store/users";
-import UsersService from "../services/UsersService";
-import { UserCard } from "../components/UserCard";
-import { SVGLoader } from "../components/SVGLoader";
-import { User } from "../interfaces/IUser";
-import { RootState } from "../store";
+import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { usersActions } from '../store/users'
+import UsersService from '../services/UsersService'
+import { UserCard } from '../components/UserCard'
+import { SVGLoader } from '../components/SVGLoader'
+import { User } from '../interfaces/IUser'
+import { RootState } from '../store'
 
 export const Users = () => {
-  const navigate = useNavigate();
-  const users: User[] = useSelector((state: RootState) => state?.users.users);
+  const navigate = useNavigate()
+  const users: User[] = useSelector((state: RootState) => state?.users.users)
   const isLoading: boolean = useSelector(
     (state: RootState) => state?.users.isLoading
-  );
-  const dispatch = useDispatch();
+  )
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const getUsers = async () => {
-      await dispatch(usersActions.setLoader(true));
-      const response = await UsersService.FetchGithubUsers();
-      await dispatch(usersActions.setUsers(response?.data));
-      await dispatch(usersActions.setLoader(false));
-    };
+      await dispatch(usersActions.setLoader(true))
+      const response = await UsersService.FetchGithubUsers()
+      await dispatch(usersActions.setUsers(response?.data))
+      await dispatch(usersActions.setLoader(false))
+    }
 
     getUsers().catch((e) => {
-      console.error(e);
-    });
-  }, [dispatch]);
+      console.error(e)
+    })
+  }, [dispatch])
 
   const handleRouteToHomePage = () => {
-    navigate("/home");
-  };
+    navigate('/home')
+  }
 
   const handleRefresh = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
 
   if (isLoading) {
     return (
       <div className="page-center">
         <SVGLoader />
       </div>
-    );
+    )
   }
 
   if ((!users || Object.keys(users).length === 0) && !isLoading) {
@@ -56,7 +56,7 @@ export const Users = () => {
           <i className="lnr lnr-redo" data-testid="refresh-link" /> Refresh
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -73,5 +73,5 @@ export const Users = () => {
         <UserCard users={users} />
       </div>
     </div>
-  );
-};
+  )
+}

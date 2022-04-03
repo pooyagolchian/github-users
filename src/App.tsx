@@ -1,7 +1,8 @@
-import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import { Users } from "./pages/Users";
-import { Home } from "./pages/Home";
+import React from 'react'
+import { Route, Routes, Navigate } from 'react-router-dom'
+import { Users } from './pages/Users'
+import { Home } from './pages/Home'
+
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route path="/" element={<Navigate replace to="/home" />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
