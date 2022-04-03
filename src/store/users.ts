@@ -18,6 +18,15 @@ const usersSlice = createSlice({
     setUsers(state: UserState, action: { payload: User[] }) {
       state.users = action.payload;
     },
+    removeUser(state: UserState, action: { payload: number }) {
+      state.users.splice(
+        state.users.findIndex((user: User) => user.id === action.payload),
+        1
+      );
+    },
+    setLoader(state: UserState, action: { payload: boolean }) {
+      state.isLoading = action.payload;
+    },
   },
 });
 
