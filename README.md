@@ -1,3 +1,14 @@
+## Press Page GitHub Users Application
+
+This project has been developed with the last version of React.js and Redux (Redux toolkit).
+- React.js
+- Redux toolkit
+- Typescript
+- Cypress for E2E
+- React testing library
+- Prettier, ESLint, Husky
+- Netlify and GithubAction for CI/CD automate testing
+
 ## Available Scripts
 
 In the project directory, you can run:
